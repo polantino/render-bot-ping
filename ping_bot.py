@@ -1,6 +1,5 @@
 import requests
 import os
-import time
 
 # Replace with your bot's URL
 BOT_URL = os.getenv("BOT_URL", "https://your-bot.onrender.com")
@@ -16,6 +15,4 @@ def ping_bot():
         print(f"Error pinging {BOT_URL}: {e}")
 
 if __name__ == "__main__":
-    while True:
-        ping_bot()
-        time.sleep(120)  # Wait for 2 minutes before pinging again
+    ping_bot()  # Run the script once
